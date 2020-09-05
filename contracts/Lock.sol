@@ -265,18 +265,22 @@ contract Lock is Ownable {
          emit PaymentsUpdatedOnDeposit(paymentSize,startTime,paymentsRemaining);
     }
 
-    function updateBeneficiaryBalance() private {
-        if(epochLength == 0)
-            return;
+    function getElapsedReward() public view returns (uint,uint,uint){
+         if(epochLength == 0)
+            return (0, startTime,paymentsRemaining);
         uint elapsedEpochs = (block.timestamp - startTime)/epochLength;
         if(elapsedEpochs==0)
-            return;
+            return (0, startTime,paymentsRemaining);
         elapsedEpochs = elapsedEpochs>paymentsRemaining?paymentsRemaining:elapsedEpochs;
-        startTime = block.timestamp;
-        paymentsRemaining = paymentsRemaining.sub(elapsedEpochs);
+        uint newStartTime = block.timestamp;
+        uint newPaymentsRemaining = paymentsRemaining.sub(elapsedEpochs);
         uint balance  =_token.balanceOf(address(this));
         uint accumulatedFunds = paymentSize.mul(elapsedEpochs);
-        beneficiaryBalance = beneficiaryBalance.add(accumulatedFunds>balance?balance:accumulatedFunds);
+         return (beneficiaryBalance.add(accumulatedFunds>balance?balance:accumulatedFunds),newStartTime,newPaymentsRemaining);
+    } 
+
+    function updateBeneficiaryBalance() private {
+        (beneficiaryBalance,startTime, paymentsRemaining) = getElapsedReward();
     }
 
     function changeBeneficiary (address beneficiary) public onlyOwner{
