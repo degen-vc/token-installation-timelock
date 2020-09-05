@@ -17,6 +17,25 @@ Before calling Deposit, ensure the calling wallet has sufficient balance to matc
 
 The beneficiary has to invoke the release function to claim accumulated payments.
 
+### Time periods
+One of the parameters on the initialization function is duration which takes a number as a key representing one of the following:
+```
+        second = 0,
+        minute = 1,
+        hour = 2,
+        day = 3,
+        week = 4,
+        month = 5, //inaccurate, assumes 30 day month, subject to drift
+        year = 6,
+        quarter = 7,//13 weeks
+        biannual = 8//26 weeks
+```
+In addition to the duration type, you can set a duration multiple. Eg. if the duration is set to 5 and the multiple to 3 then the duration between withdrawals is 3 weeks. 
+If you set a duration to a number higher than 8 then the duration will be that number in seconds. For instance, if if I set the duration to 4000 then each period will be 4000 seconds long. 
+
+Finally the periods parameter determines how many periods the payments will be split into. Eg
+For duration = 2, duration multiple = 1 and periods = 3, there will be 3 payments spaced an hour apart each. 
+
 ### Deposit while vesting
 If the contract is in a vesting state, invoking the Deposit function will recalculate the payments to ensure that the entire balance is paid out by the final period.
 
