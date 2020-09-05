@@ -1,0 +1,22 @@
+{
+  "name": "token-installation-timelock",
+  "version": "1.0.0",
+  "description": "A contract for releasing token payments in equal chunks at regular intervals.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/degen-vc/token-installation-timelock.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/degen-vc/token-installation-timelock/issues"
+  },
+  "homepage": "https://github.com/degen-vc/token-installation-timelock#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.1.0"
+  }
+}
