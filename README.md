@@ -11,6 +11,13 @@ The Lock exists in 2 states:
 1. Dormant. After deployment there is no vesting schedule until the deposit function is invoked. Once all payments are made, the contract is again dormant.
 2. Vesting. After a deposit is made, the start time is set to the current block time and the payment schedule begins.
 
+To initialize the timelock, we first have to set parameters. Calling the function initialize presents us with 
+* token address, beneficiary address, duration type, duration multiple and periods *
+
+The last 3 time parameters are discussed below.
+
+Once initialized, all that is required to kick the contract into a vesting state is to call the deposit function with a desired quantity of tokens. Keep in mind that you will be required to ERC20.approve the Lock token address and that the amount variable is in base (wei) units. So if your token has 18 decimal places then sending 1 token requires inputting the number 1000000000000000000. 
+
 ## Usage
 After deploying the Lock contract, the vesting schedule is not activated until you call the Deposit function, setting the starting time to now.
 Before calling Deposit, ensure the calling wallet has sufficient balance to match the amount specified and that the ERC20 approval has been made for the Lock contract.
