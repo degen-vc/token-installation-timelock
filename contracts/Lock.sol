@@ -184,7 +184,7 @@ contract Ownable is Context {
  * tokens at predefined intervals. Tokens not claimed at payment epochs accumulate
  * Modified version of Openzeppelin's TokenTimeLock
  */
-contract TokenInstallationsTimeLock is Ownable {
+contract Lock is Ownable {
     using SafeMath for uint;
     enum period {
         second,
@@ -214,7 +214,7 @@ contract TokenInstallationsTimeLock is Ownable {
     uint startTime =0;
     uint beneficiaryBalance = 0;
 
-    function initialize(address tokenAddress, address beneficiary, uint duration,uint p)  public onlyOwner{
+    function initialize(address tokenAddress, address beneficiary, uint duration,uint durationMultiple,uint p)  public onlyOwner{
         release();
         require(paymentsRemaining == 0, 'cannot initialize during active vesting schedule');
         require(duration>0 && p>0, 'epoch parameters must be positive');
@@ -223,20 +223,23 @@ contract TokenInstallationsTimeLock is Ownable {
         if(duration<=uint(period.biannual)){
          
             if(duration == uint(period.second)){
-                epochLength = 1 seconds;
-            }else if(duration == uint(period.hour)){
-                epochLength = 1 hours;
+                epochLength = durationMultiple * 1 seconds;
+            }else if(duration == uint(period.minute)){
+                epochLength = durationMultiple * 1 minutes;
+            }
+            else if(duration == uint(period.hour)){
+                epochLength =  durationMultiple *1 hours;
             }else if(duration == uint(period.day)){
-                epochLength = 1 days;
+                epochLength =  durationMultiple *1 days;
             }
             else if(duration == uint(period.week)){
-                epochLength = 1 weeks;
+                epochLength =  durationMultiple *1 weeks;
             }else if(duration == uint(period.month)){
-                epochLength = 30 days;
+                epochLength =  durationMultiple *30 days;
             }else if(duration == uint(period.year)){
-                epochLength = 52 weeks;
+                epochLength =  durationMultiple *52 weeks;
             }else if(duration == uint(period.quarter)){
-                epochLength = 13 weeks;
+                epochLength =  durationMultiple *13 weeks;
             }
             else if(duration == uint(period.biannual)){
                 epochLength = 26 weeks;
@@ -247,10 +250,10 @@ contract TokenInstallationsTimeLock is Ownable {
             }
             periods = p;
 
-        emit Initialized(tokenAddress,beneficiary,duration,p);
+        emit Initialized(tokenAddress,beneficiary,epochLength,p);
     }
 
-    function Deposit (uint amount) public { //remember to ERC20.approve
+    function deposit (uint amount) public { //remember to ERC20.approve
          require (_token.transferFrom(msg.sender,address(this),amount),'transfer failed');
          uint balance = _token.balanceOf(address(this));
          if(paymentsRemaining==0)
@@ -263,15 +266,20 @@ contract TokenInstallationsTimeLock is Ownable {
     }
 
     function updateBeneficiaryBalance() private {
+        if(epochLength == 0)
+            return;
         uint elapsedEpochs = (block.timestamp - startTime)/epochLength;
+        if(elapsedEpochs==0)
+            return;
+        elapsedEpochs = elapsedEpochs>paymentsRemaining?paymentsRemaining:elapsedEpochs;
         startTime = block.timestamp;
-        paymentsRemaining = elapsedEpochs>paymentsRemaining?0:paymentsRemaining-elapsedEpochs;
+        paymentsRemaining = paymentsRemaining.sub(elapsedEpochs);
         uint balance  =_token.balanceOf(address(this));
         uint accumulatedFunds = paymentSize.mul(elapsedEpochs);
         beneficiaryBalance = beneficiaryBalance.add(accumulatedFunds>balance?balance:accumulatedFunds);
     }
 
-    function ChangeBeneficiary (address beneficiary) public onlyOwner{
+    function changeBeneficiary (address beneficiary) public onlyOwner{
         require (paymentsRemaining == 0, 'cannot change beneficiary while token balance positive');
         _beneficiary = beneficiary;
     }
@@ -285,7 +293,7 @@ contract TokenInstallationsTimeLock is Ownable {
     /**
      * @notice Transfers tokens held by timelock to beneficiary.
      */
-    function release() public virtual {//wrong
+    function release() public {
         // solhint-disable-next-line not-rely-on-time
         require(block.timestamp >= startTime, "TokenTimelock: current time is before release time");
         updateBeneficiaryBalance();
@@ -293,10 +301,10 @@ contract TokenInstallationsTimeLock is Ownable {
         beneficiaryBalance = 0;
         if(amountToSend>0)
             require(_token.transfer(_beneficiary,amountToSend),'release funds failed');
-        emit FundsReleasedToBeneficiary(_beneficiary,amountToSend);
+        emit FundsReleasedToBeneficiary(_beneficiary,amountToSend,block.timestamp);
     }
 
     event PaymentsUpdatedOnDeposit(uint paymentSize,uint startTime, uint paymentsRemaining);
     event Initialized (address tokenAddress, address beneficiary, uint duration,uint periods);
-    event FundsReleasedToBeneficiary(address beneficiary, uint value);
+    event FundsReleasedToBeneficiary(address beneficiary, uint value, uint timeStamp);
 }

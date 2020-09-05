@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/degen-vc/token-installation-timelock#readme",
   "dependencies": {
-    "@openzeppelin/contracts": "^3.1.0"
+    "bignumber.js": "^9.0.0"
   }
 }
