@@ -11,8 +11,8 @@ The Lock exists in 2 states:
 1. Dormant. After deployment there is no vesting schedule until the deposit function is invoked. Once all payments are made, the contract is again dormant.
 2. Vesting. After a deposit is made, the start time is set to the current block time and the payment schedule begins.
 
-To initialize the timelock, we first have to set parameters. Calling the function initialize presents us with 
-* token address, beneficiary address, duration type, duration multiple and periods *
+To initialize the timelock, we first have to set parameters. The function initialize has the following parameters:
+*token address, beneficiary address, duration type, duration multiple and periods*
 
 The last 3 time parameters are discussed below.
 
