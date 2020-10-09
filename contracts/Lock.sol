@@ -70,7 +70,6 @@ library Address {
     }
 }
 
-
 library SafeMath {
     
     function add(uint256 a, uint256 b) internal pure returns (uint256) {
@@ -146,7 +145,6 @@ abstract contract Context {
     }
 }
 
-
 contract Ownable is Context {
     address private _owner;
 
@@ -177,7 +175,6 @@ contract Ownable is Context {
         _owner = newOwner;
     }
 }
-
 
 /**
  * @dev A token holder contract that will allow a beneficiary to extract the
@@ -284,7 +281,7 @@ contract Lock is Ownable {
     }
 
     function changeBeneficiary (address beneficiary) public onlyOwner{
-        require (paymentsRemaining == 0, 'cannot change beneficiary while token balance positive');
+        require (paymentsRemaining == 0, 'TokenTimelock: cannot change beneficiary while token balance positive');
         _beneficiary = beneficiary;
     }
     /**

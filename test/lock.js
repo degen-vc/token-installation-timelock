@@ -7,6 +7,7 @@ const time = require('./helpers/time')
 const lock = artifacts.require('Lock')
 const mockToken = artifacts.require('MockToken')
 const hundredMillion = '100000000000000000000000000'
+
 contract('lock1', accounts => {
     var lockInstance, mockTokenInstance
 
@@ -20,7 +21,7 @@ contract('lock1', accounts => {
         try {
             await lockInstance.initialize(mockTokenInstance.address, accounts[3], 10, 1, 4);
         } catch (exception) {
-            assert.fail('initializing multiple times before deposit should not fail.')
+            assert.fail('initializing multiple times before deposit should fail.')
         }
         await mockTokenInstance.approve(lockInstance.address, hundredMillion)
         await lockInstance.deposit(hundredMillion)
@@ -181,3 +182,35 @@ contract('lock4', accounts => {
     })
 })
 
+contract('lock5', accounts => {
+    var lockInstance, mockTokenInstance
+
+    setup(async () => {
+        lockInstance = await lock.deployed()
+        mockTokenInstance = await mockToken.deployed()
+    })
+
+    test('changing beneficiary during vesting should fail', async () => {
+        let beneficiary = accounts[6]
+        await lockInstance.initialize(mockTokenInstance.address, beneficiary, 7, 1, 6); //6 yearly quarters
+        await mockTokenInstance.approve(lockInstance.address, hundredMillion)
+        await lockInstance.changeBeneficiary(accounts[4])
+        beneficiary = await lockInstance.beneficiary.call()
+        assert.equal(beneficiary,accounts[4])
+        await lockInstance.deposit('144808909149053') //should break that into 24134818191508 every 3 months
+        await expectThrow(lockInstance.changeBeneficiary(accounts[5]),'TokenTimelock: cannot change beneficiary while token balance positive')
+        beneficiary = await lockInstance.beneficiary.call()
+        assert.equal(beneficiary,accounts[4])
+        const quarter = 60 * 60 * 24 * 7 * 13*7
+
+        await time.advanceTimeAndBlock(quarter)
+        await lockInstance.release()
+        let balance = await mockTokenInstance.balanceOf(beneficiary)
+        assert.equal(balance.toString(), '144808909149048')
+
+        await lockInstance.changeBeneficiary(accounts[5])
+
+        beneficiary = await lockInstance.beneficiary.call()
+        assert.equal(beneficiary,accounts[5])
+    })
+})
