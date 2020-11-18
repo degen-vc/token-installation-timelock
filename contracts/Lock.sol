@@ -1,7 +1,7 @@
 // contracts/Lock.sol
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.7.0;
+pragma solidity ^0.7.4;
 
 import "contracts/lib/Ownable.sol";
 import "contracts/lib/SafeMath.sol";

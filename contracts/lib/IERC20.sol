@@ -1,5 +1,6 @@
 // contracts/lib/IERC20.sol
 // SPDX-License-Identifier: MIT
+pragma solidity ^0.7.4;
 
 interface IERC20 {
     function totalSupply() external view returns (uint256);

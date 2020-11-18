@@ -1,5 +1,6 @@
 // contracts/lib/ERC20.sol
 // SPDX-License-Identifier: MIT
+pragma solidity ^0.7.4;
 import "contracts/lib/Context.sol";
 import "contracts/lib/IERC20.sol";
 import "contracts/lib/SafeMath.sol";

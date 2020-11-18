@@ -1,6 +1,6 @@
 // contracts/lib/Context.sol
 // SPDX-License-Identifier: MIT
-
+pragma solidity ^0.7.4;
 abstract contract Context {
     function _msgSender() internal view virtual returns (address payable) {
         return msg.sender;

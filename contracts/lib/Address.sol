@@ -1,6 +1,9 @@
 // contracts/lib/Address.sol
 // SPDX-License-Identifier: MIT
 
+pragma solidity ^0.7.4;
+
+
 library Address {
     function isContract(address account) internal view returns (bool) {
         // According to EIP-1052, 0x0 is the value returned for not-yet created accounts
