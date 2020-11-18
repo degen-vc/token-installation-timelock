@@ -4,3 +4,5 @@ const Token = artifacts.require('EPANToken')
 module.exports = function(deployer) {
   deployer.deploy(Migrations);
 };
+
+
