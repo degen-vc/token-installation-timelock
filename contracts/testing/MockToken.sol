@@ -155,11 +155,11 @@ contract ERC20 is Context, IERC20 {
     uint256 private _totalSupply;
 
     function name() public pure returns (string memory) {
-        return 'Mock';
+        return 'Paypolitan Token';
     }
 
     function symbol() public pure returns (string memory) {
-        return 'MCK';
+        return 'EPAN';
     }
 
     function decimals() public pure returns (uint8) {
@@ -226,15 +226,15 @@ contract ERC20 is Context, IERC20 {
     }
 
 
-    function _burn(address account, uint256 amount) internal virtual {
-        require(account != address(0), "ERC20: burn from the zero address");
+    // function _burn(address account, uint256 amount) internal virtual {
+    //     require(account != address(0), "ERC20: burn from the zero address");
 
-        _beforeTokenTransfer(account, address(0), amount);
+    //     _beforeTokenTransfer(account, address(0), amount);
 
-        _balances[account] = _balances[account].sub(amount, "ERC20: burn amount exceeds balance");
-        _totalSupply = _totalSupply.sub(amount);
-        emit Transfer(account, address(0), amount);
-    }
+    //     _balances[account] = _balances[account].sub(amount, "ERC20: burn amount exceeds balance");
+    //     _totalSupply = _totalSupply.sub(amount);
+    //     emit Transfer(account, address(0), amount);
+    // }
 
     function _approve(address owner, address spender, uint256 amount) internal virtual {
         require(owner != address(0), "ERC20: approve from the zero address");

@@ -1,0 +1,29 @@
+{
+  "manifestVersion": "2.2",
+  "contracts": {
+    "ERC20": "ERC20",
+    "Lock": "Lock",
+    "Migrations": "Migrations",
+    "MockToken": "MockToken",
+    "Ownable": "Ownable"
+  },
+  "dependencies": {},
+  "name": "token-installation-timelock",
+  "version": "0.0.2",
+  "compiler": {
+    "compilerSettings": {
+      "optimizer": {
+        "enabled": false,
+        "runs": "200"
+      }
+    },
+    "typechain": {
+      "enabled": false
+    },
+    "manager": "openzeppelin",
+    "artifactsDir": "build/contracts",
+    "contractsDir": "contracts",
+    "solcVersion": "0.7.4"
+  },
+  "telemetryOptIn": true
+}

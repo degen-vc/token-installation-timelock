@@ -2,3 +2,6 @@
 *.pdf
 /build.secret
 .secret
+
+.openzeppelin/.session
+.vscode

@@ -1,5 +1,5 @@
 {
-  "name": "token-installation-timelock",
+  "name": "paypolitan-token-timelock",
   "version": "1.0.0",
   "description": "A contract for releasing token payments in equal chunks at regular intervals.",
   "main": "index.js",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/degen-vc/token-installation-timelock#readme",
   "dependencies": {
+    "@truffle/hdwallet-provider": "^1.2.0",
     "bignumber.js": "^9.0.0"
   }
 }
