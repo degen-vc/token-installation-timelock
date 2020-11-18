@@ -3,7 +3,9 @@
 
 pragma solidity ^0.7.0;
 
-import {*} as "./lib/*.sol";
+import "contracts/lib/Ownable.sol";
+import "contracts/lib/SafeMath.sol";
+import "contracts/lib/IERC20.sol";
 
 /**
  * @dev A token holder contract that will allow a beneficiary to extract the

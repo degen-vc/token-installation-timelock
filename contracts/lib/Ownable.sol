@@ -1,7 +1,7 @@
 // contracts/Ownable.sol
 // SPDX-License-Identifier: MIT
 
-import "Context.sol";
+import "contracts/lib/Context.sol";
 
 contract Ownable is Context {
     address private _owner;

@@ -1,9 +1,9 @@
 // contracts/lib/ERC20.sol
 // SPDX-License-Identifier: MIT
-import "Context.sol"
-import "IERC20.sol"
-import "SafeMath.sol"
-import "Address.sol"
+import "contracts/lib/Context.sol";
+import "contracts/lib/IERC20.sol";
+import "contracts/lib/SafeMath.sol";
+import "contracts/lib/Address.sol";
 
 contract ERC20 is Context, IERC20 {
     using SafeMath for uint256;

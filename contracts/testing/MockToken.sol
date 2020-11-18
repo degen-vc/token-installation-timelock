@@ -3,7 +3,7 @@
 
 pragma solidity ^0.7.0;
 
-import "../lib/*.sol";
+import "contracts/lib/ERC20.sol";
 
 contract MockToken is ERC20{
     constructor(){
