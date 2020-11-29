@@ -1,10 +1,11 @@
-// contracts/lib/ERC20.sol
+// ./ERC20.sol
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.7.4;
-import "contracts/lib/Context.sol";
-import "contracts/lib/IERC20.sol";
-import "contracts/lib/SafeMath.sol";
-import "contracts/lib/Address.sol";
+
+import "./Context.sol";
+import "./IERC20.sol";
+import "./SafeMath.sol";
+import "./Address.sol";
 
 contract ERC20 is Context, IERC20 {
     using SafeMath for uint256;

@@ -21,7 +21,7 @@
       "storage": [
         {
           "contract": "Ownable",
-          "path": "contracts/lib/Ownable.sol",
+          "path": "Ownable.sol",
           "label": "_owner",
           "astId": 1245,
           "type": "t_address",
@@ -29,7 +29,7 @@
         },
         {
           "contract": "Lock",
-          "path": "contracts/Lock.sol",
+          "path": "Lock.sol",
           "label": "epochLength",
           "astId": 40,
           "type": "t_uint256",
@@ -37,7 +37,7 @@
         },
         {
           "contract": "Lock",
-          "path": "contracts/Lock.sol",
+          "path": "Lock.sol",
           "label": "_token",
           "astId": 42,
           "type": "t_address",
@@ -45,7 +45,7 @@
         },
         {
           "contract": "Lock",
-          "path": "contracts/Lock.sol",
+          "path": "Lock.sol",
           "label": "_beneficiary",
           "astId": 44,
           "type": "t_address",
@@ -53,7 +53,7 @@
         },
         {
           "contract": "Lock",
-          "path": "contracts/Lock.sol",
+          "path": "Lock.sol",
           "label": "periods",
           "astId": 46,
           "type": "t_uint256",
@@ -61,7 +61,7 @@
         },
         {
           "contract": "Lock",
-          "path": "contracts/Lock.sol",
+          "path": "Lock.sol",
           "label": "paymentSize",
           "astId": 48,
           "type": "t_uint256",
@@ -69,7 +69,7 @@
         },
         {
           "contract": "Lock",
-          "path": "contracts/Lock.sol",
+          "path": "Lock.sol",
           "label": "paymentsRemaining",
           "astId": 51,
           "type": "t_uint256",
@@ -77,7 +77,7 @@
         },
         {
           "contract": "Lock",
-          "path": "contracts/Lock.sol",
+          "path": "Lock.sol",
           "label": "startTime",
           "astId": 54,
           "type": "t_uint256",
@@ -85,7 +85,7 @@
         },
         {
           "contract": "Lock",
-          "path": "contracts/Lock.sol",
+          "path": "Lock.sol",
           "label": "beneficiaryBalance",
           "astId": 57,
           "type": "t_uint256",
@@ -124,7 +124,7 @@
       "storage": [
         {
           "contract": "ERC20",
-          "path": "contracts/lib/ERC20.sol",
+          "path": "ERC20.sol",
           "label": "_balances",
           "astId": 792,
           "type": "t_mapping<t_uint256>",
@@ -132,7 +132,7 @@
         },
         {
           "contract": "ERC20",
-          "path": "contracts/lib/ERC20.sol",
+          "path": "ERC20.sol",
           "label": "_allowances",
           "astId": 798,
           "type": "t_mapping<t_uint256>",
@@ -140,7 +140,7 @@
         },
         {
           "contract": "ERC20",
-          "path": "contracts/lib/ERC20.sol",
+          "path": "ERC20.sol",
           "label": "_totalSupply",
           "astId": 800,
           "type": "t_uint256",
@@ -178,7 +178,7 @@
       "storage": [
         {
           "contract": "Migrations",
-          "path": "contracts/Migrations.sol",
+          "path": "Migrations.sol",
           "label": "owner",
           "astId": 524,
           "type": "t_address",
@@ -186,7 +186,7 @@
         },
         {
           "contract": "Migrations",
-          "path": "contracts/Migrations.sol",
+          "path": "Migrations.sol",
           "label": "last_completed_migration",
           "astId": 526,
           "type": "t_uint256",
@@ -225,7 +225,7 @@
       "storage": [
         {
           "contract": "ERC20",
-          "path": "contracts/lib/ERC20.sol",
+          "path": "ERC20.sol",
           "label": "_balances",
           "astId": 792,
           "type": "t_mapping<t_uint256>",
@@ -233,7 +233,7 @@
         },
         {
           "contract": "ERC20",
-          "path": "contracts/lib/ERC20.sol",
+          "path": "ERC20.sol",
           "label": "_allowances",
           "astId": 798,
           "type": "t_mapping<t_uint256>",
@@ -241,7 +241,7 @@
         },
         {
           "contract": "ERC20",
-          "path": "contracts/lib/ERC20.sol",
+          "path": "ERC20.sol",
           "label": "_totalSupply",
           "astId": 800,
           "type": "t_uint256",
@@ -274,7 +274,7 @@
       "storage": [
         {
           "contract": "Ownable",
-          "path": "contracts/lib/Ownable.sol",
+          "path": "Ownable.sol",
           "label": "_owner",
           "astId": 1245,
           "type": "t_address",
@@ -300,6 +300,13 @@
         "kind": "NonProxy",
         "bytecodeHash": "a7d208ca23ee9ec046e4ba519d5b9c1bbc6064ffe29f6b02e7387177e1813307"
       }
+    ],
+    "paypolitan-token-timelock/MockToken": [
+      {
+        "address": "0xe14Cdee7a633A4201bBfEa63d0D1835B638e9BE1",
+        "kind": "NonProxy",
+        "bytecodeHash": "b91d8cb5f621c958d7a4ef4b7d6095b9c56c55219518da6720a7d5d52966dcd7"
+      }
     ]
   },
   "manifestVersion": "2.2",
@@ -309,5 +316,14 @@
   },
   "proxyFactory": {
     "address": "0xF49e70112f23d8d2933D73cdF7eeac6718305d2b"
+  },
+  "app": {
+    "address": "0x2894AeBB1c05D990c33600D138569f89eD036d3E"
+  },
+  "package": {
+    "address": "0xfC0D494a96ad7F175D7Ad3F7879C4bcbb2cA8814"
+  },
+  "provider": {
+    "address": "0xb9696E7921f68fD4da9113c8C1438364C4fF11fD"
   }
 }

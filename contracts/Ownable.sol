@@ -1,7 +1,7 @@
-// contracts/Ownable.sol
+// ./Ownable.sol
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.7.4;
-import "contracts/lib/Context.sol";
+import "./Context.sol";
 
 contract Ownable is Context {
     address private _owner;

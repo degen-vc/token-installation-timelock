@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/degen-vc/token-installation-timelock#readme",
   "dependencies": {
+    "@truffle/hdwallet-provider": "*"
+  },
+  "old": {
     "@openzeppelin/contracts": "*",
     "@truffle/hdwallet-provider": "*",
     "base64-js": "^1.5.1",

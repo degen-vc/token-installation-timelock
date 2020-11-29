@@ -1,18 +1,22 @@
-// contracts/Lock.sol
+// Lock.sol
 // SPDX-License-Identifier: MIT
+
 
 pragma solidity ^0.7.4;
 
-import "contracts/lib/Ownable.sol";
-import "contracts/lib/SafeMath.sol";
-import "contracts/lib/IERC20.sol";
+import "./Ownable.sol";
+import "./SafeMath.sol";
+import "./ERC20.sol";
 
 /**
  * @dev A token holder contract that will allow a beneficiary to extract the
  * tokens at predefined intervals. Tokens not claimed at payment epochs accumulate
  * Modified version of Openzeppelin's TokenTimeLock
  */
+
+
 contract Lock is Ownable {
+
     using SafeMath for uint;
     enum period {
         second,
@@ -42,7 +46,7 @@ contract Lock is Ownable {
     uint startTime =0;
     uint beneficiaryBalance = 0;
 
-    function initialize(address tokenAddress, address beneficiary, uint duration,uint durationMultiple,uint p)  public onlyOwner{
+    function initialize(address tokenAddress, address beneficiary, uint duration, uint durationMultiple, uint p)  public onlyOwner {
         release();
         require(paymentsRemaining == 0, 'cannot initialize during active vesting schedule');
         require(duration>0 && p>0, 'epoch parameters must be positive');
@@ -111,7 +115,7 @@ contract Lock is Ownable {
         (beneficiaryBalance,startTime, paymentsRemaining) = getElapsedReward();
     }
 
-    function changeBeneficiary (address beneficiary) public onlyOwner{
+    function changeBeneficiary (address beneficiary) public onlyOwner {
         require (paymentsRemaining == 0, 'TokenTimelock: cannot change beneficiary while token balance positive');
         _beneficiary = beneficiary;
     }

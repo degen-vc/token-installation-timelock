@@ -21,10 +21,10 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const infuraKey = "9698ade175d94981abe3e552c59f6e8e";
 const fs = require('fs');
-const local_deployer = "0x1D8a5ca8f2Aa71e7bAFb862e4E006DC7e5aABa0E";
+const local_deployer = "0xC49F90E9d521542C3FbCD9718CC44Bd5dBEed062";
 const local_mnemonic = fs.readFileSync(".mnemonic").toString().trim();
 
-const deployer = "0x4532280A66a0c1c709f7e0c40B14b4dEA83253C1";
+const deployer = "0xC49F90E9d521542C3FbCD9718CC44Bd5dBEed062";
 const mnemonic = fs.readFileSync(".secret").toString().trim();
 
 module.exports = {
@@ -46,12 +46,12 @@ module.exports = {
     // options below to some value.
     //
     development: {
-      provider: () => new HDWalletProvider(local_mnemonic, `http://127.0.0.1:8545`),
-      host: "127.0.0.1",     // Localhost (default: none)
-      port: 8545,            // Standard Ethereum port (default: none)
+      provider: () => new HDWalletProvider(local_mnemonic, `http://0.0.0.0:7545`),
+      host: "0.0.0.0",     // Localhost (default: none)
+      port: 7545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
       gas: 6700000,           // Gas sent with each transaction (default: ~6700000)
-      gasPrice: 20000000000,  // 20 gwei (in wei) (default: 100 gwei)
+      gasPrice: 200000000000,  // 20 gwei (in wei) (default: 100 gwei)
       from: local_deployer,        // Account to send txs from (default: accounts[0])
       websockets: true        // Enable EventEmitter interface for web3 (default: false)
     },
@@ -87,6 +87,9 @@ module.exports = {
     mainnet: {
       provider: () => new HDWalletProvider(mnemonic, `https://mainnet.infura.io/v3/`+infuraKey),
       network_id: 1,   // This network is yours, in the cloud.
+      gas: 6700000,           // Gas sent with each transaction (default: ~6700000)
+      // gasPrice: 25000000000,  // 20 gwei (in wei) (default: 100 gwei)
+      gasPrice: 000000000,  // 20 gwei (in wei) (default: 100 gwei)
       from: deployer,        // Account to send txs from (default: accounts[0])
       confirmations: 12,    // # of confs to wait between deployments. (default: 0)
       production: true    // Treats this network as if it was a public net. (default: false)
@@ -105,7 +108,7 @@ module.exports = {
       network_id: 56,       // Custom network
       gas: 8500000,           // Gas sent with each transaction (default: ~6700000)
       gasPrice: 20000000000,  // 20 gwei (in wei) (default: 100 gwei)
-      from: '0x4532280A66a0c1c709f7e0c40B14b4dEA83253C1',        // Account to send txs from (default: accounts[0])
+      from: deployer,        // Account to send txs from (default: accounts[0])
       websockets: true        // Enable EventEmitter interface for web3 (default: false)
     }
   },

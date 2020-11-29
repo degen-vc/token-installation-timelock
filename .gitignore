@@ -1,7 +1,8 @@
 /node_modules
 *.pdf
-/build.secret
+/build
 .secret
 
 .openzeppelin/.session
 .vscode
+.DS_Store
