@@ -1,0 +1,15 @@
+{
+  "contracts": {},
+  "solidityLibs": {},
+  "proxies": {
+    "Paypolitan Token/EPANToken": [
+      {
+        "address": "0x72630B1e3B42874bf335020Ba0249e3E9e47Bafc",
+        "kind": "NonProxy",
+        "bytecodeHash": "0x34000d08f303d5f33035d5f0d33df7680c81efe2b2fbb5172fd531b71722d021"
+      }
+    ]
+  },
+  "manifestVersion": "2.2",
+  "version": "0.0.2"
+}

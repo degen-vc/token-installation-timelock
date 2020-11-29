@@ -5,15 +5,16 @@
     "Lock": "Lock",
     "Migrations": "Migrations",
     "MockToken": "MockToken",
-    "Ownable": "Ownable"
+    "Ownable": "Ownable",
+    "EPANToken": "EPANToken"
   },
   "dependencies": {},
-  "name": "token-installation-timelock",
+  "name": "paypolitan-token-timelock",
   "version": "0.0.2",
   "compiler": {
     "compilerSettings": {
       "optimizer": {
-        "enabled": false,
+        "enabled": true,
         "runs": "200"
       }
     },
