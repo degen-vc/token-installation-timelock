@@ -69,7 +69,7 @@ module.exports = {
       network_id: 4,       // Custom network
       gas: 8500000,           // Gas sent with each transaction (default: ~6700000)
       gasPrice: 20000000000,  // 20 gwei (in wei) (default: 100 gwei)
-      from: deployer,        // Account to send txs from (default: accounts[0])
+      from: local_deployer,        // Account to send txs from (default: accounts[0])
       websockets: true        // Enable EventEmitter interface for web3 (default: false)
     },
     // Useful for deploying to a public network.
@@ -80,7 +80,7 @@ module.exports = {
       gas: 5500000,        // Ropsten has a lower block limit than mainnet
       confirmations: 2,    // # of confs to wait between deployments. (default: 0)
       timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
-      from: deployer,        // Account to send txs from (default: accounts[0])
+      from: local_deployer,        // Account to send txs from (default: accounts[0])
       skipDryRun: true     // Skip dry run before migrations? (default: false for public nets )
     },
     // Useful for private networks
@@ -89,8 +89,8 @@ module.exports = {
       network_id: 1,   // This network is yours, in the cloud.
       gas: 6700000,           // Gas sent with each transaction (default: ~6700000)
       // gasPrice: 25000000000,  // 20 gwei (in wei) (default: 100 gwei)
-      gasPrice: 000000000,  // 20 gwei (in wei) (default: 100 gwei)
-      from: deployer,        // Account to send txs from (default: accounts[0])
+      gasPrice: 20000000000,  // 20 gwei (in wei) (default: 100 gwei)
+      from: local_deployer,        // Account to send txs from (default: accounts[0])
       confirmations: 12,    // # of confs to wait between deployments. (default: 0)
       production: true    // Treats this network as if it was a public net. (default: false)
     },
@@ -100,7 +100,7 @@ module.exports = {
       network_id: 97,       // Custom network
       gas: 8500000,           // Gas sent with each transaction (default: ~6700000)
       gasPrice: 20000000000,  // 20 gwei (in wei) (default: 100 gwei)
-      from: deployer,        // Account to send txs from (default: accounts[0])
+      from: local_deployer,        // Account to send txs from (default: accounts[0])
       websockets: true        // Enable EventEmitter interface for web3 (default: false)
     },
     bnbmainnet: {
@@ -108,7 +108,7 @@ module.exports = {
       network_id: 56,       // Custom network
       gas: 8500000,           // Gas sent with each transaction (default: ~6700000)
       gasPrice: 20000000000,  // 20 gwei (in wei) (default: 100 gwei)
-      from: deployer,        // Account to send txs from (default: accounts[0])
+      from: local_deployer,        // Account to send txs from (default: accounts[0])
       websockets: true        // Enable EventEmitter interface for web3 (default: false)
     }
   },
