@@ -30,5 +30,8 @@
     "safe-buffer": "^5.2.1",
     "simple-concat": "^1.0.1",
     "solidity-docgen": "^0.5.8"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-etherscan": "^2.0.1"
   }
 }

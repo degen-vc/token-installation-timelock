@@ -117,7 +117,9 @@ module.exports = {
   mocha: {
     // timeout: 100000
   },
-
+  etherscan: {
+    apiKey: etherscanApiKey
+  },
   // Configure your compilers
   compilers: {
     solc: {
