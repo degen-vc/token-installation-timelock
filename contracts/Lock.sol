@@ -97,6 +97,26 @@ contract Lock is Ownable {
          emit PaymentsUpdatedOnDeposit(paymentSize,startTime,paymentsRemaining);
     }
 
+    /**
+     * @return the beneficiary of the tokens.
+     */
+    function getStatus() public view returns (string memory) {
+        if (epochLength == 0)
+            return ("Box Open");
+        uint elapsedEpochs = (block.timestamp - startTime)/epochLength;
+        if (elapsedEpochs == 0)
+            return ("Box Open");
+        return ("Box Closed");
+    }
+
+    /**
+     * @return the beneficiary of the tokens.
+     */
+    function getPaymentsRemaining() public view returns (uint) {
+        return paymentsRemaining;
+    }
+
+
     function getElapsedReward() public view returns (uint,uint,uint){
          if(epochLength == 0)
             return (0, startTime,paymentsRemaining);
@@ -122,7 +142,7 @@ contract Lock is Ownable {
     /**
      * @return the beneficiary of the tokens.
      */
-    function beneficiary() public view returns (address) {
+    function getBeneficiary() public view returns (address) {
         return _beneficiary;
     }
 
@@ -143,4 +163,6 @@ contract Lock is Ownable {
     event PaymentsUpdatedOnDeposit(uint paymentSize,uint startTime, uint paymentsRemaining);
     event Initialized (address tokenAddress, address beneficiary, uint duration,uint periods);
     event FundsReleasedToBeneficiary(address beneficiary, uint value, uint timeStamp);
+    event BoxStatusOpen();
+    event BoxStatusClosed();
 }
