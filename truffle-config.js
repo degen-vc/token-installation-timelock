@@ -25,6 +25,10 @@ const fs = require('fs');
 const local_deployer = "0x4532280A66a0c1c709f7e0c40B14b4dEA83253C1";
 const local_mnemonic = fs.readFileSync(".mnemonic").toString().trim();
 
+const truffleteam_deployer = "0x4532280A66a0c1c709f7e0c40B14b4dEA83253C1";
+const truffleteam_mnemonic = fs.readFileSync(".truffleteam").toString().trim();
+
+
 const deployer = "0xC49F90E9d521542C3FbCD9718CC44Bd5dBEed062";
 
 if(fs.existsSync(".secret")){
@@ -56,6 +60,16 @@ module.exports = {
     development: {
       provider: () => new HDWalletProvider(local_mnemonic, `http://0.0.0.0:7545`),
       host: "0.0.0.0",     // Localhost (default: none)
+      port: 7545,            // Standard Ethereum port (default: none)
+      network_id: "*",       // Any network (default: none)
+      gas: 6700000,           // Gas sent with each transaction (default: ~6700000)
+      gasPrice: 200000000000,  // 20 gwei (in wei) (default: 100 gwei)
+      from: local_deployer,        // Account to send txs from (default: accounts[0])
+      websockets: true        // Enable EventEmitter interface for web3 (default: false)
+    },
+    truamtruam: {
+      provider: () => new HDWalletProvider(truffleteam_mnemonic, `https://sandbox.truffleteams.com/6d1ffe74-8d0e-4a6f-8725-d8c18a80f309`),
+      host: "https://sandbox.truffleteams.com/6d1ffe74-8d0e-4a6f-8725-d8c18a80f309",     // Localhost (default: none)
       port: 7545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
       gas: 6700000,           // Gas sent with each transaction (default: ~6700000)
