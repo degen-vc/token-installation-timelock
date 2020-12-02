@@ -7,10 +7,10 @@ const Context = artifacts.require("Context");
 
 module.exports = async function (deployer, network) {
 
-  // const _name = "My Token";
-  // const _symbol = "MYTO";
-  // const _decimals = 1;
-  // const _totalSupply = 5000;
+  const _name = "My Token";
+  const _symbol = "MYTO";
+  const _decimals = 1;
+  const _totalSupply = 5000;
 
 
 
