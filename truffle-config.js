@@ -21,7 +21,7 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const infuraKey = "9698ade175d94981abe3e552c59f6e8e";
 const fs = require('fs');
-const local_deployer = "0xC49F90E9d521542C3FbCD9718CC44Bd5dBEed062";
+const local_deployer = "0x4532280A66a0c1c709f7e0c40B14b4dEA83253C1";
 const local_mnemonic = fs.readFileSync(".mnemonic").toString().trim();
 
 const deployer = "0xC49F90E9d521542C3FbCD9718CC44Bd5dBEed062";
@@ -117,8 +117,20 @@ module.exports = {
   mocha: {
     // timeout: 100000
   },
+  plugins: [
+    'truffle-plugin-verify'
+  ],
+  api_keys: {
+    etherscan: 'JG73NH7DPHI7DEWSE8IWUC1MQ4X38ZM8AE'
+  },
+  paths: {
+    sources: "./contracts",
+    tests: "./test",
+    cache: "./cache",
+    artifacts: "./artifacts"
+  },
   etherscan: {
-    apiKey: etherscanApiKey
+    apiKey: "JG73NH7DPHI7DEWSE8IWUC1MQ4X38ZM8AE"
   },
   // Configure your compilers
   compilers: {
@@ -126,7 +138,7 @@ module.exports = {
       version: "0.7.4",
       settings: {
         optimizer: {
-          enabled: false,
+          enabled: true,
           runs: 200
         }
       }

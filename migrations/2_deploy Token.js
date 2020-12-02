@@ -1,6 +1,6 @@
 
 const MockToken = artifacts.require('MockToken');
-const EPANToken = artifacts.require('EPANToken');
+// const EPANToken = artifacts.require('EPANToken');
 const Address = artifacts.require("Address");
 const SafeMath = artifacts.require("SafeMath");
 const Context = artifacts.require("Context");

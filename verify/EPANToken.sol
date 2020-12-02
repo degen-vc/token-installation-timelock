@@ -1,10 +1,10 @@
-// contracts/EPANToken.sol
+// EPANToken.sol
 // SPDX-License-Identifier: MIT
 
 pragma solidity ^0.7.4;
 
 // import "contracts/lib/ERC20.sol";
-import "ERC20.sol";
+import "./ERC20.sol";
 
 contract EPANToken is ERC20 {
 

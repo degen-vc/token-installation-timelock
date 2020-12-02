@@ -97,25 +97,75 @@ contract Lock is Ownable {
          emit PaymentsUpdatedOnDeposit(paymentSize,startTime,paymentsRemaining);
     }
 
+    // }
+    /**
+     * @return the beneficiary of the tokens.
+     */
+    function getBoxLabel() public view returns (string memory) {
+        return ("Box Name");
+    }
+//var/get/set bpx label
+
+    // function changeBeneficiary (address beneficiary) public onlyOwner {
+    //     require (paymentsRemaining == 0, 'TokenTimelock: cannot change beneficiary while token balance positive');
+    //     _beneficiary = beneficiary;
+    // }
+    // /**
+    //  * @return the beneficiary of the tokens.
+    //  */
+    // function getBeneficiary() public view returns (address) {
+    //     return _beneficiary;
+    // }
+
+
+
     /**
      * @return the beneficiary of the tokens.
      */
     function getStatus() public view returns (string memory) {
-        if (epochLength == 0)
-            return ("Box Open");
+        if (epochLength > 0)
+            return ("Box Closed");
         uint elapsedEpochs = (block.timestamp - startTime)/epochLength;
         if (elapsedEpochs == 0)
             return ("Box Open");
         return ("Box Closed");
     }
+    /**
+     * @return the beneficiary of the tokens.
+     */
+    function getTimeRemaining() public view returns (uint) {
+        return startTime - block.timestamp;
 
+    }
     /**
      * @return the beneficiary of the tokens.
      */
     function getPaymentsRemaining() public view returns (uint) {
         return paymentsRemaining;
     }
+    /**
+     * @return the beneficiary of the tokens.
+     */
+    function getAmountToSend() public view returns (uint) {
+        return beneficiaryBalance; //amountToSend;
+    }
+    
+    /**
+     * @return the beneficiary of the tokens.
+     */
+    function getAccumulatedFunds() public view returns (uint) {
+        uint elapsedEpochs = (block.timestamp - startTime)/epochLength;
+        uint accumulatedFunds = paymentSize.mul(elapsedEpochs);
+        return accumulatedFunds;
+    }
 
+    /**
+     * @return the beneficiary of the tokens.
+     */
+    function getBalance() public view returns (uint) {
+        uint balance  =_token.balanceOf(address(this));
+        return balance;
+    }
 
     function getElapsedReward() public view returns (uint,uint,uint){
          if(epochLength == 0)
@@ -163,6 +213,6 @@ contract Lock is Ownable {
     event PaymentsUpdatedOnDeposit(uint paymentSize,uint startTime, uint paymentsRemaining);
     event Initialized (address tokenAddress, address beneficiary, uint duration,uint periods);
     event FundsReleasedToBeneficiary(address beneficiary, uint value, uint timeStamp);
-    event BoxStatusOpen();
-    event BoxStatusClosed();
+    // event BoxStatusOpen();
+    // event BoxStatusClosed();
 }

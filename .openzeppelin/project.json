@@ -6,8 +6,9 @@
     "Migrations": "Migrations",
     "MockToken": "MockToken",
     "Ownable": "Ownable",
-    "EPANToken": "EPANToken",
-    "Context": "Context"
+    "Context": "Context",
+    "Address": "Address",
+    "SafeMath": "SafeMath"
   },
   "dependencies": {},
   "name": "paypolitan-token-timelock",

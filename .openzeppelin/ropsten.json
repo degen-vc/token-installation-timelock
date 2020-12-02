@@ -1,6 +1,29 @@
 {
   "contracts": {},
   "solidityLibs": {},
-  "proxies": {},
-  "manifestVersion": "2.2"
+  "proxies": {
+    "paypolitan-token-timelock/Lock": [
+      {
+        "address": "0x0647019F60faf5206bF5bD30dEC8F12F7094C7C3",
+        "kind": "NonProxy",
+        "bytecodeHash": "f0a615fe580aee53635bd049a9150dd5c6b8441981650e12a4dd17419103a0c7"
+      },
+      {
+        "address": "0xFf2F7a4305C959234ff0C8BD7e017D5dfB0e067f",
+        "kind": "NonProxy",
+        "bytecodeHash": "f0a615fe580aee53635bd049a9150dd5c6b8441981650e12a4dd17419103a0c7"
+      }
+    ]
+  },
+  "manifestVersion": "2.2",
+  "version": "0.0.2",
+  "app": {
+    "address": "0x0Ee1cdE1D81Ff67eCc4F11037d17De81d022B391"
+  },
+  "package": {
+    "address": "0xcB8639d1e2c2Ab962430642fad93504B4B34Ad06"
+  },
+  "provider": {
+    "address": "0x9950b8042Be8B43a2c7419858308aC05e24d337a"
+  }
 }

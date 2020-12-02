@@ -290,6 +290,22 @@
         "storageUncheckedVars": [],
         "storageDiff": []
       }
+    },
+    "Address": {
+      "address": "0x7C3041acE8de91FB7168965ef7ac94fD4AdC2Bb2",
+      "constructorCode": "60566023600b82828239805160001a607314601657fe5b30600052607381538281f3fe",
+      "bodyBytecodeHash": "ee73aad5bd038ce2475e754f20e3ab26185542921d592fb0d073842a183ee677",
+      "localBytecodeHash": "4bffc79c339357805a6807e3a9bf61258bf4f865ed87546869cc5a2d72ac9c19",
+      "deployedBytecodeHash": "4bffc79c339357805a6807e3a9bf61258bf4f865ed87546869cc5a2d72ac9c19",
+      "types": {},
+      "storage": [],
+      "warnings": {
+        "hasConstructor": false,
+        "hasSelfDestruct": false,
+        "hasDelegateCall": false,
+        "hasInitialValuesInDeclarations": false,
+        "uninitializedBaseContracts": []
+      }
     }
   },
   "solidityLibs": {},
@@ -306,6 +322,27 @@
         "address": "0xe14Cdee7a633A4201bBfEa63d0D1835B638e9BE1",
         "kind": "NonProxy",
         "bytecodeHash": "b91d8cb5f621c958d7a4ef4b7d6095b9c56c55219518da6720a7d5d52966dcd7"
+      }
+    ],
+    "paypolitan-token-timelock/Address": [
+      {
+        "address": "0xfb649D7Fc62358c0Be3048E28224639d9B5572E1",
+        "version": "0.0.2",
+        "implementation": "0x7C3041acE8de91FB7168965ef7ac94fD4AdC2Bb2",
+        "admin": "0xe6cFACb20CAaF709055837A285FB20752662723a",
+        "kind": "Upgradeable"
+      }
+    ],
+    "paypolitan-token-timelock/Lock": [
+      {
+        "address": "0x53519B5bbF90dD5eC2c657c64C707660CAc56f0a",
+        "kind": "NonProxy",
+        "bytecodeHash": "f403f006e4961b54cbf45993a53a16544dea12d967b2bb038274c0b00fe3d5a5"
+      },
+      {
+        "address": "0x510f3fb9623d8cAf2f2C7BDB0bf4387C94878cf7",
+        "kind": "NonProxy",
+        "bytecodeHash": "f403f006e4961b54cbf45993a53a16544dea12d967b2bb038274c0b00fe3d5a5"
       }
     ]
   },
