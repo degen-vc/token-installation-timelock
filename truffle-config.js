@@ -27,7 +27,7 @@ const local_mnemonic = fs.readFileSync(".mnemonic").toString().trim();
 
 const deployer = "0xC49F90E9d521542C3FbCD9718CC44Bd5dBEed062";
 
-if(fs.fileExists(".secret")){
+if(fs.existsSync(".secret")){
 const mnemonic = fs.readFileSync(".secret").toString().trim();
 } else {
   const mnemonic = local_mnemonic;
