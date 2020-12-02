@@ -16,7 +16,9 @@ module.exports = async function (deployer, network) {
 
   if (network === 'development') {
     await deployer.deploy(MockToken);
-  } else {
+  } else if (network === 'truamtruam') {
+    await deployer.deploy(MockToken);
+  }else {
 
     // // await deployer.deploy(MyToken, _name, _symbol, _decimals, _totalSupply);
     // await deployer.deploy(EPANToken, 94697000);
