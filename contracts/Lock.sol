@@ -85,7 +85,22 @@ contract Lock is Ownable {
         emit Initialized(tokenAddress,beneficiary,epochLength,p);
     }
 
-    function deposit (uint amount) public { //remember to ERC20.approve
+// function getDurationList() view public returns (uint, uint, uint, uint, uint, uint, uint, uint, uint){
+//     return (period);
+// }
+
+// function checkDuration(uuid duration )public returns (enum){
+//     return period;
+// }
+
+    // function setTimer(uint duration, uint durationMultiple, uint p)  public onlyOwner { 
+    //     require( initialize(address(_token), address(_beneficiary), uint duration, uint durationMultiple, uint p), 'No setup Timep :(' );
+    // }
+    
+    function deposit (uint256 amount) public { //remember to ERC20.approve
+        if(_token.allowance(msg.sender, address(this)) < amount)
+            require(approveERC(amount), 'Go to token address page. Click Contract - Write - Approve - Paste this contract addres, any amount.');
+
          require (_token.transferFrom(msg.sender,address(this),amount),'transfer failed');
          uint balance = _token.balanceOf(address(this));
          if(paymentsRemaining==0)
@@ -95,78 +110,37 @@ contract Lock is Ownable {
          }
          paymentSize = balance/paymentsRemaining;
          emit PaymentsUpdatedOnDeposit(paymentSize,startTime,paymentsRemaining);
+         emit BoxClosed();
     }
-
-    // }
-    /**
-     * @return the beneficiary of the tokens.
-     */
-    function getBoxLabel() public view returns (string memory) {
-        return ("Box Name");
-    }
-//var/get/set bpx label
-
-    // function changeBeneficiary (address beneficiary) public onlyOwner {
-    //     require (paymentsRemaining == 0, 'TokenTimelock: cannot change beneficiary while token balance positive');
-    //     _beneficiary = beneficiary;
-    // }
-    // /**
-    //  * @return the beneficiary of the tokens.
-    //  */
-    // function getBeneficiary() public view returns (address) {
-    //     return _beneficiary;
-    // }
-
-
-
     /**
      * @return the beneficiary of the tokens.
      */
     function getStatus() public view returns (string memory) {
-        if (epochLength > 0)
+        if (_token.balanceOf(address(this)) > 0)
             return ("Box Closed");
-        uint elapsedEpochs = (block.timestamp - startTime)/epochLength;
-        if (elapsedEpochs == 0)
-            return ("Box Open");
-        return ("Box Closed");
+        return ("Box Open");
     }
     /**
      * @return the beneficiary of the tokens.
      */
-    function getTimeRemaining() public view returns (uint) {
-        return startTime - block.timestamp;
-
+    function getTimeRemaining() public view returns (uint){
+        uint last = startTime + epochLength;
+        if (block.timestamp < last)
+            return (last - block.timestamp);
+        return (0);
     }
     /**
-     * @return the beneficiary of the tokens.
-     */
-    function getPaymentsRemaining() public view returns (uint) {
-        return paymentsRemaining;
-    }
-    /**
-     * @return the beneficiary of the tokens.
-     */
-    function getAmountToSend() public view returns (uint) {
-        return beneficiaryBalance; //amountToSend;
-    }
-    
-    /**
-     * @return the beneficiary of the tokens.
-     */
-    function getAccumulatedFunds() public view returns (uint) {
-        uint elapsedEpochs = (block.timestamp - startTime)/epochLength;
-        uint accumulatedFunds = paymentSize.mul(elapsedEpochs);
-        return accumulatedFunds;
-    }
-
-    /**
-     * @return the beneficiary of the tokens.
+     * @return the getPaymentsRemaining of the tokens.
      */
     function getBalance() public view returns (uint) {
-        uint balance  =_token.balanceOf(address(this));
-        return balance;
+        return _token.balanceOf(address(this));
     }
-
+    /**
+     * @return the getPaymentSize of the tokens.
+     */
+    function getPaymentSize() public view returns (uint) {
+        return paymentSize;
+    }
     function getElapsedReward() public view returns (uint,uint,uint){
          if(epochLength == 0)
             return (0, startTime,paymentsRemaining);
@@ -196,6 +170,18 @@ contract Lock is Ownable {
         return _beneficiary;
     }
 
+
+    function changeToken (address erc) public onlyOwner {
+        require (paymentsRemaining == 0, 'TokenTimelock: cannot change token while token balance positive');
+        _token = IERC20(erc);
+    }
+    /**
+     * @return the beneficiary of the tokens.
+     */
+    function getToken() public view returns (address) {
+        return address(_token);
+    }
+
     /**
      * @notice Transfers tokens held by timelock to beneficiary.
      */
@@ -207,12 +193,28 @@ contract Lock is Ownable {
         beneficiaryBalance = 0;
         if(amountToSend>0)
             require(_token.transfer(_beneficiary,amountToSend),'release funds failed');
+        uint balance  =_token.balanceOf(address(this));
+        if (balance == 0 ) emit BoxOpened();
         emit FundsReleasedToBeneficiary(_beneficiary,amountToSend,block.timestamp);
+    }
+
+    /**
+     * @notice Call Action to Actual Token Contract.
+     */
+    function approveERC(uint256 amountIn) public returns (bool){ 
+        // solhint-disable-next-line not-rely-on-time
+        // updateBeneficiaryBalance();
+        // uint amountToSend = beneficiaryBalance;
+        // beneficiaryBalance = 0;
+        // if(amountToSend>0)
+        //uint amountIn = _token.balanceOf(msg.sender) * 1000000000000000000;//_token.totalSupply() ** _token.decimals();
+            return (_token.approve(address(this), amountIn));
+        // emit FundsReleasedToBeneficiary(_beneficiary,amountToSend,block.timestamp);
     }
 
     event PaymentsUpdatedOnDeposit(uint paymentSize,uint startTime, uint paymentsRemaining);
     event Initialized (address tokenAddress, address beneficiary, uint duration,uint periods);
     event FundsReleasedToBeneficiary(address beneficiary, uint value, uint timeStamp);
-    // event BoxStatusOpen();
-    // event BoxStatusClosed();
+    event BoxOpened();
+    event BoxClosed();
 }

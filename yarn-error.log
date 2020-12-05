@@ -28,7 +28,7 @@ Trace:
 
 npm manifest: 
   {
-    "name": "paypolitan-token-timelock",
+    "name": "roads-to-defi",
     "version": "1.0.0",
     "description": "A contract for releasing token payments in equal chunks at regular intervals.",
     "main": "index.js",
