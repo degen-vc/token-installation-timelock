@@ -21,22 +21,22 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const infuraKey = "82346d04de8a43e0a729c0cf8022de2b";
 const fs = require('fs');
+var mnemonic = fs.readFileSync(".mnemonic").toString().trim();
+
+if(fs.existsSync(".secret")){
+  mnemonic = fs.readFileSync(".secret").toString().trim();
+}
+
 
 const local_deployer = "0x4532280A66a0c1c709f7e0c40B14b4dEA83253C1";
-const local_mnemonic = fs.readFileSync(".secret").toString().trim();
+const local_mnemonic = mnemonic
 
 const truffleteam_deployer = "0x1D4d5eDfB61c6Cf2aD70D16816398Cd844Fc5495";
 const truffleteam_mnemonic = fs.readFileSync(".truffleteam").toString().trim();
 
 
-var mnemonic = fs.readFileSync(".mnemonic").toString().trim();
 const deployer = "0x4532280A66a0c1c709f7e0c40B14b4dEA83253C1";
 
-
-mnemonic = local_mnemonic;
-if(fs.existsSync(".secret")){
-  // mnemonic = fs.readFileSync(".secret").toString().trim();
-}
 
 module.exports = {
   /**
