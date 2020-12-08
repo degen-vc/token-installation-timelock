@@ -30,12 +30,12 @@ const truffleteam_mnemonic = fs.readFileSync(".truffleteam").toString().trim();
 
 
 var mnemonic = fs.readFileSync(".mnemonic").toString().trim();
-const deployer = "0x1D8a5ca8f2Aa71e7bAFb862e4E006DC7e5aABa0E";
+const deployer = "0x4532280A66a0c1c709f7e0c40B14b4dEA83253C1";
 
 
-// mnemonic = local_mnemonic;
+mnemonic = local_mnemonic;
 if(fs.existsSync(".secret")){
-  mnemonic = fs.readFileSync(".secret").toString().trim();
+  // mnemonic = fs.readFileSync(".secret").toString().trim();
 }
 
 module.exports = {
@@ -141,8 +141,9 @@ module.exports = {
       gas: 6700000,           // Gas sent with each transaction (default: ~6700000)
       // gasPrice: 15000000000,  // 20 gwei (in wei) (default: 100 gwei)
       // gasPrice: 25000000000,  // 20 gwei (in wei) (default: 100 gwei)
-      gasPrice: 4200000000,  // 20 gwei (in wei) (default: 100 gwei)
-      // gasPrice: 100000000000,  // 20 gwei (in wei) (default: 100 gwei)
+      gasPrice: 42000000000,  // 20 gwei (in wei) (default: 100 gwei)
+      // gasPrice: 52000000000,  // 20 gwei (in wei) (default: 100 gwei)
+      timeoutBlocks: 200,  // # of blocks before a deployment times out  (minimum/default: 50)
       from: deployer,        // Account to send txs from (default: accounts[0])
       confirmations: 12,    // # of confs to wait between deployments. (default: 0)
       production: true,    // Treats this network as if it was a public net. (default: false)

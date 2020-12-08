@@ -11,7 +11,7 @@ const ERC20 = artifacts.require("ERC20");
 
 module.exports = async function (deployer, network) {
 
-  const _name = "My Token";
+  const _name = "TestToken";
   const _symbol = "MYTO";
   const _decimals = 18;
   const _totalSupply = 5000;
@@ -23,8 +23,9 @@ module.exports = async function (deployer, network) {
   } else if (network === 'truamtruam') {
     await deployer.deploy(MockToken);
   }else {
-
-    // await deployer.deploy(MockToken);//.initialize(_name, _symbol, _decimals, _totalSupply).send;
+    if (network === 'mainnet') {
+        // await deployer.deploy(MockToken , _name, _symbol, _decimals, _totalSupply);
+    }
   }
 
   await deployer.deploy(Address);

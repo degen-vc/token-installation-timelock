@@ -2,7 +2,7 @@
   "contracts": {},
   "solidityLibs": {},
   "proxies": {
-    "paypolitan-token-timelock/Lock": [
+    "roads-to-defi/Lock": [
       {
         "address": "0x0647019F60faf5206bF5bD30dEC8F12F7094C7C3",
         "kind": "NonProxy",

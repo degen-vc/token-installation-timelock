@@ -85,21 +85,9 @@ contract Lock is Ownable {
         emit Initialized(tokenAddress,beneficiary,epochLength,p);
     }
 
-// function getDurationList() view public returns (uint, uint, uint, uint, uint, uint, uint, uint, uint){
-//     return (period);
-// }
-
-// function checkDuration(uuid duration )public returns (enum){
-//     return period;
-// }
-
-    // function setTimer(uint duration, uint durationMultiple, uint p)  public onlyOwner { 
-    //     require( initialize(address(_token), address(_beneficiary), uint duration, uint durationMultiple, uint p), 'No setup Timep :(' );
-    // }
-    
     function deposit (uint256 amount) public { //remember to ERC20.approve
-        if(_token.allowance(msg.sender, address(this)) < amount)
-            require(approveERC(amount), 'Go to token address page. Click Contract - Write - Approve - Paste this contract addres, any amount.');
+        // if(_token.allowance(msg.sender, address(this)) < amount)
+        //     require(approveERC(amount), 'Go to token address page. Click Contract - Write - Approve - Paste this contract addres, any amount.');
 
          require (_token.transferFrom(msg.sender,address(this),amount),'transfer failed');
          uint balance = _token.balanceOf(address(this));
@@ -113,7 +101,7 @@ contract Lock is Ownable {
          emit BoxClosed();
     }
     /**
-     * @return the beneficiary of the tokens.
+     * @return box status.
      */
     function getStatus() public view returns (string memory) {
         if (_token.balanceOf(address(this)) > 0)
@@ -121,7 +109,7 @@ contract Lock is Ownable {
         return ("Box Open");
     }
     /**
-     * @return the beneficiary of the tokens.
+     * @return get time remaining.
      */
     function getTimeRemaining() public view returns (uint){
         uint last = startTime + epochLength;
@@ -130,16 +118,17 @@ contract Lock is Ownable {
         return (0);
     }
     /**
-     * @return the getPaymentsRemaining of the tokens.
+     * @return the get balance of the tokens.
      */
-    function getBalance() public view returns (uint) {
+    function getBalance() public view returns (uint256) {
         return _token.balanceOf(address(this));
     }
     /**
-     * @return the getPaymentSize of the tokens.
+     * @return the get payment size of the tokens.
      */
-    function getPaymentSize() public view returns (uint) {
-        return paymentSize;
+    function getPaymentSize() public view returns (uint256) {
+        uint256 nextPayment = paymentSize>getBalance()?getBalance():paymentSize;
+        return nextPayment;
     }
     function getElapsedReward() public view returns (uint,uint,uint){
          if(epochLength == 0)
@@ -176,7 +165,7 @@ contract Lock is Ownable {
         _token = IERC20(erc);
     }
     /**
-     * @return the beneficiary of the tokens.
+     * @return the address of the tokens.
      */
     function getToken() public view returns (address) {
         return address(_token);
@@ -203,10 +192,6 @@ contract Lock is Ownable {
      */
     function approveERC(uint256 amountIn) public returns (bool){ 
         // solhint-disable-next-line not-rely-on-time
-        // updateBeneficiaryBalance();
-        // uint amountToSend = beneficiaryBalance;
-        // beneficiaryBalance = 0;
-        // if(amountToSend>0)
         //uint amountIn = _token.balanceOf(msg.sender) * 1000000000000000000;//_token.totalSupply() ** _token.decimals();
             return (_token.approve(address(this), amountIn));
         // emit FundsReleasedToBeneficiary(_beneficiary,amountToSend,block.timestamp);

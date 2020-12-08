@@ -8,11 +8,13 @@
     "Ownable": "Ownable",
     "Context": "Context",
     "Address": "Address",
-    "SafeMath": "SafeMath"
+    "SafeMath": "SafeMath",
+    "Lock1": "Lock1",
+    "Lock2": "Lock2"
   },
   "dependencies": {},
-  "name": "paypolitan-token-timelock",
-  "version": "0.0.2",
+  "name": "roads-to-defi",
+  "version": "0.1.1",
   "compiler": {
     "compilerSettings": {
       "optimizer": {
