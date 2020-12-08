@@ -1,0 +1,34 @@
+{
+  "manifestVersion": "2.2",
+  "contracts": {
+    "ERC20": "ERC20",
+    "Lock": "Lock",
+    "Migrations": "Migrations",
+    "MockToken": "MockToken",
+    "Ownable": "Ownable",
+    "Context": "Context",
+    "Address": "Address",
+    "SafeMath": "SafeMath",
+    "Lock1": "Lock1",
+    "Lock2": "Lock2"
+  },
+  "dependencies": {},
+  "name": "roads-to-defi",
+  "version": "0.1.1",
+  "compiler": {
+    "compilerSettings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": "200"
+      }
+    },
+    "typechain": {
+      "enabled": false
+    },
+    "manager": "openzeppelin",
+    "artifactsDir": "build/contracts",
+    "contractsDir": "contracts",
+    "solcVersion": "0.7.4"
+  },
+  "telemetryOptIn": true
+}

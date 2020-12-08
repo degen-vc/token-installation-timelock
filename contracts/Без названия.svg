@@ -1,0 +1,320 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [  <!ENTITY quot "&#34;">  <!ENTITY amp "&#38;">  <!ENTITY apos "&#39;">  <!ENTITY lt "&#60;">  <!ENTITY gt "&#62;">  <!ENTITY nbsp "&#160;">  <!ENTITY iexcl "&#161;">  <!ENTITY cent "&#162;">  <!ENTITY pound "&#163;">  <!ENTITY curren "&#164;">  <!ENTITY yen "&#165;">  <!ENTITY brvbar "&#166;">  <!ENTITY sect "&#167;">  <!ENTITY uml "&#168;">  <!ENTITY copy "&#169;">  <!ENTITY ordf "&#170;">  <!ENTITY laquo "&#171;">  <!ENTITY not "&#172;">  <!ENTITY shy "&#173;">  <!ENTITY reg "&#174;">  <!ENTITY macr "&#175;">  <!ENTITY deg "&#176;">  <!ENTITY plusmn "&#177;">  <!ENTITY sup2 "&#178;">  <!ENTITY sup3 "&#179;">  <!ENTITY acute "&#180;">  <!ENTITY micro "&#181;">  <!ENTITY para "&#182;">  <!ENTITY middot "&#183;">  <!ENTITY cedil "&#184;">  <!ENTITY sup1 "&#185;">  <!ENTITY ordm "&#186;">  <!ENTITY raquo "&#187;">  <!ENTITY frac14 "&#188;">  <!ENTITY frac12 "&#189;">  <!ENTITY frac34 "&#190;">  <!ENTITY iquest "&#191;">  <!ENTITY Agrave "&#192;">  <!ENTITY Aacute "&#193;">  <!ENTITY Acirc "&#194;">  <!ENTITY Atilde "&#195;">  <!ENTITY Auml "&#196;">  <!ENTITY Aring "&#197;">  <!ENTITY AElig "&#198;">  <!ENTITY Ccedil "&#199;">  <!ENTITY Egrave "&#200;">  <!ENTITY Eacute "&#201;">  <!ENTITY Ecirc "&#202;">  <!ENTITY Euml "&#203;">  <!ENTITY Igrave "&#204;">  <!ENTITY Iacute "&#205;">  <!ENTITY Icirc "&#206;">  <!ENTITY Iuml "&#207;">  <!ENTITY ETH "&#208;">  <!ENTITY Ntilde "&#209;">  <!ENTITY Ograve "&#210;">  <!ENTITY Oacute "&#211;">  <!ENTITY Ocirc "&#212;">  <!ENTITY Otilde "&#213;">  <!ENTITY Ouml "&#214;">  <!ENTITY times "&#215;">  <!ENTITY Oslash "&#216;">  <!ENTITY Ugrave "&#217;">  <!ENTITY Uacute "&#218;">  <!ENTITY Ucirc "&#219;">  <!ENTITY Uuml "&#220;">  <!ENTITY Yacute "&#221;">  <!ENTITY THORN "&#222;">  <!ENTITY szlig "&#223;">  <!ENTITY agrave "&#224;">  <!ENTITY aacute "&#225;">  <!ENTITY acirc "&#226;">  <!ENTITY atilde "&#227;">  <!ENTITY auml "&#228;">  <!ENTITY aring "&#229;">  <!ENTITY aelig "&#230;">  <!ENTITY ccedil "&#231;">  <!ENTITY egrave "&#232;">  <!ENTITY eacute "&#233;">  <!ENTITY ecirc "&#234;">  <!ENTITY euml "&#235;">  <!ENTITY igrave "&#236;">  <!ENTITY iacute "&#237;">  <!ENTITY icirc "&#238;">  <!ENTITY iuml "&#239;">  <!ENTITY eth "&#240;">  <!ENTITY ntilde "&#241;">  <!ENTITY ograve "&#242;">  <!ENTITY oacute "&#243;">  <!ENTITY ocirc "&#244;">  <!ENTITY otilde "&#245;">  <!ENTITY ouml "&#246;">  <!ENTITY divide "&#247;">  <!ENTITY oslash "&#248;">  <!ENTITY ugrave "&#249;">  <!ENTITY uacute "&#250;">  <!ENTITY ucirc "&#251;">  <!ENTITY uuml "&#252;">  <!ENTITY yacute "&#253;">  <!ENTITY thorn "&#254;">  <!ENTITY yuml "&#255;">  <!ENTITY OElig "&#338;">  <!ENTITY oelig "&#339;">  <!ENTITY Scaron "&#352;">  <!ENTITY scaron "&#353;">  <!ENTITY Yuml "&#376;">  <!ENTITY fnof "&#402;">  <!ENTITY circ "&#710;">  <!ENTITY tilde "&#732;">  <!ENTITY Alpha "&#913;">  <!ENTITY Beta "&#914;">  <!ENTITY Gamma "&#915;">  <!ENTITY Delta "&#916;">  <!ENTITY Epsilon "&#917;">  <!ENTITY Zeta "&#918;">  <!ENTITY Eta "&#919;">  <!ENTITY Theta "&#920;">  <!ENTITY Iota "&#921;">  <!ENTITY Kappa "&#922;">  <!ENTITY Lambda "&#923;">  <!ENTITY Mu "&#924;">  <!ENTITY Nu "&#925;">  <!ENTITY Xi "&#926;">  <!ENTITY Omicron "&#927;">  <!ENTITY Pi "&#928;">  <!ENTITY Rho "&#929;">  <!ENTITY Sigma "&#931;">  <!ENTITY Tau "&#932;">  <!ENTITY Upsilon "&#933;">  <!ENTITY Phi "&#934;">  <!ENTITY Chi "&#935;">  <!ENTITY Psi "&#936;">  <!ENTITY Omega "&#937;">  <!ENTITY alpha "&#945;">  <!ENTITY beta "&#946;">  <!ENTITY gamma "&#947;">  <!ENTITY delta "&#948;">  <!ENTITY epsilon "&#949;">  <!ENTITY zeta "&#950;">  <!ENTITY eta "&#951;">  <!ENTITY theta "&#952;">  <!ENTITY iota "&#953;">  <!ENTITY kappa "&#954;">  <!ENTITY lambda "&#955;">  <!ENTITY mu "&#956;">  <!ENTITY nu "&#957;">  <!ENTITY xi "&#958;">  <!ENTITY omicron "&#959;">  <!ENTITY pi "&#960;">  <!ENTITY rho "&#961;">  <!ENTITY sigmaf "&#962;">  <!ENTITY sigma "&#963;">  <!ENTITY tau "&#964;">  <!ENTITY upsilon "&#965;">  <!ENTITY phi "&#966;">  <!ENTITY chi "&#967;">  <!ENTITY psi "&#968;">  <!ENTITY omega "&#969;">  <!ENTITY thetasym "&#977;">  <!ENTITY upsih "&#978;">  <!ENTITY piv "&#982;">  <!ENTITY ensp "&#8194;">  <!ENTITY emsp "&#8195;">  <!ENTITY thinsp "&#8201;">  <!ENTITY zwnj "&#8204;">  <!ENTITY zwj "&#8205;">  <!ENTITY lrm "&#8206;">  <!ENTITY rlm "&#8207;">  <!ENTITY ndash "&#8211;">  <!ENTITY mdash "&#8212;">  <!ENTITY lsquo "&#8216;">  <!ENTITY rsquo "&#8217;">  <!ENTITY sbquo "&#8218;">  <!ENTITY ldquo "&#8220;">  <!ENTITY rdquo "&#8221;">  <!ENTITY bdquo "&#8222;">  <!ENTITY dagger "&#8224;">  <!ENTITY Dagger "&#8225;">  <!ENTITY bull "&#8226;">  <!ENTITY hellip "&#8230;">  <!ENTITY permil "&#8240;">  <!ENTITY prime "&#8242;">  <!ENTITY Prime "&#8243;">  <!ENTITY lsaquo "&#8249;">  <!ENTITY rsaquo "&#8250;">  <!ENTITY oline "&#8254;">  <!ENTITY frasl "&#8260;">  <!ENTITY euro "&#8364;">  <!ENTITY image "&#8465;">  <!ENTITY weierp "&#8472;">  <!ENTITY real "&#8476;">  <!ENTITY trade "&#8482;">  <!ENTITY alefsym "&#8501;">  <!ENTITY larr "&#8592;">  <!ENTITY uarr "&#8593;">  <!ENTITY rarr "&#8594;">  <!ENTITY darr "&#8595;">  <!ENTITY harr "&#8596;">  <!ENTITY crarr "&#8629;">  <!ENTITY lArr "&#8656;">  <!ENTITY uArr "&#8657;">  <!ENTITY rArr "&#8658;">  <!ENTITY dArr "&#8659;">  <!ENTITY hArr "&#8660;">  <!ENTITY forall "&#8704;">  <!ENTITY part "&#8706;">  <!ENTITY exist "&#8707;">  <!ENTITY empty "&#8709;">  <!ENTITY nabla "&#8711;">  <!ENTITY isin "&#8712;">  <!ENTITY notin "&#8713;">  <!ENTITY ni "&#8715;">  <!ENTITY prod "&#8719;">  <!ENTITY sum "&#8721;">  <!ENTITY minus "&#8722;">  <!ENTITY lowast "&#8727;">  <!ENTITY radic "&#8730;">  <!ENTITY prop "&#8733;">  <!ENTITY infin "&#8734;">  <!ENTITY ang "&#8736;">  <!ENTITY and "&#8743;">  <!ENTITY or "&#8744;">  <!ENTITY cap "&#8745;">  <!ENTITY cup "&#8746;">  <!ENTITY int "&#8747;">  <!ENTITY there4 "&#8756;">  <!ENTITY sim "&#8764;">  <!ENTITY cong "&#8773;">  <!ENTITY asymp "&#8776;">  <!ENTITY ne "&#8800;">  <!ENTITY equiv "&#8801;">  <!ENTITY le "&#8804;">  <!ENTITY ge "&#8805;">  <!ENTITY sub "&#8834;">  <!ENTITY sup "&#8835;">  <!ENTITY nsub "&#8836;">  <!ENTITY sube "&#8838;">  <!ENTITY supe "&#8839;">  <!ENTITY oplus "&#8853;">  <!ENTITY otimes "&#8855;">  <!ENTITY perp "&#8869;">  <!ENTITY sdot "&#8901;">  <!ENTITY lceil "&#8968;">  <!ENTITY rceil "&#8969;">  <!ENTITY lfloor "&#8970;">  <!ENTITY rfloor "&#8971;">  <!ENTITY lang "&#9001;">  <!ENTITY rang "&#9002;">  <!ENTITY loz "&#9674;">  <!ENTITY spades "&#9824;">  <!ENTITY clubs "&#9827;">  <!ENTITY hearts "&#9829;">  <!ENTITY diams "&#9830;"> ]><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="993pt" height="835pt" viewBox="0.00 0.00 992.62 835.00">
+<g id="graph0" class="graph" transform="translate(30.433792460349423,796.7283025275838) scale(0.9081862952832999)" data-name="G">
+
+<polygon fill="#2e3e56" stroke="transparent" points="-4,4 -4,-831 988.624,-831 988.624,4 -4,4" style=""></polygon>
+<g id="clust1" class="cluster">
+<title style="">clusterLock</title>
+<path fill="#445773" stroke="#445773" d="M20,-8C20,-8 805.7325,-8 805.7325,-8 811.7325,-8 817.7325,-14 817.7325,-20 817.7325,-20 817.7325,-613 817.7325,-613 817.7325,-619 811.7325,-625 805.7325,-625 805.7325,-625 20,-625 20,-625 14,-625 8,-619 8,-613 8,-613 8,-20 8,-20 8,-14 14,-8 20,-8" style=""></path>
+<text text-anchor="middle" x="412.8662" y="-608.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">Lock</text>
+</g>
+<g id="clust2" class="cluster">
+<title style="">clusterIERC20</title>
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M849.7325,-271C849.7325,-271 964.624,-271 964.624,-271 970.624,-271 976.624,-277 976.624,-283 976.624,-283 976.624,-552 976.624,-552 976.624,-558 970.624,-564 964.624,-564 964.624,-564 849.7325,-564 849.7325,-564 843.7325,-564 837.7325,-558 837.7325,-552 837.7325,-552 837.7325,-283 837.7325,-283 837.7325,-277 843.7325,-271 849.7325,-271" style=""></path>
+<text text-anchor="middle" x="907.1782" y="-547.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">IERC20</text>
+</g>
+<g id="clust3" class="cluster">
+<title style="">clusterpaymentsRemaining</title>
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M854.1782,-742C854.1782,-742 961.1782,-742 961.1782,-742 967.1782,-742 973.1782,-748 973.1782,-754 973.1782,-754 973.1782,-807 973.1782,-807 973.1782,-813 967.1782,-819 961.1782,-819 961.1782,-819 854.1782,-819 854.1782,-819 848.1782,-819 842.1782,-813 842.1782,-807 842.1782,-807 842.1782,-754 842.1782,-754 842.1782,-748 848.1782,-742 854.1782,-742" style=""></path>
+<text text-anchor="middle" x="907.6782" y="-802.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">paymentsRemaining</text>
+</g>
+<g id="clust4" class="cluster">
+<title style="">clusterpaymentSize</title>
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M875.1782,-657C875.1782,-657 939.1782,-657 939.1782,-657 945.1782,-657 951.1782,-663 951.1782,-669 951.1782,-669 951.1782,-722 951.1782,-722 951.1782,-728 945.1782,-734 939.1782,-734 939.1782,-734 875.1782,-734 875.1782,-734 869.1782,-734 863.1782,-728 863.1782,-722 863.1782,-722 863.1782,-669 863.1782,-669 863.1782,-663 869.1782,-657 875.1782,-657" style=""></path>
+<text text-anchor="middle" x="907.1782" y="-717.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">paymentSize</text>
+</g>
+<g id="clust5" class="cluster">
+<title style="">clusterbeneficiaryBalance</title>
+<path fill="#3b4b63" stroke="#e8726d" stroke-dasharray="5,2" d="M857.1782,-572C857.1782,-572 957.1782,-572 957.1782,-572 963.1782,-572 969.1782,-578 969.1782,-584 969.1782,-584 969.1782,-637 969.1782,-637 969.1782,-643 963.1782,-649 957.1782,-649 957.1782,-649 857.1782,-649 857.1782,-649 851.1782,-649 845.1782,-643 845.1782,-637 845.1782,-637 845.1782,-584 845.1782,-584 845.1782,-578 851.1782,-572 857.1782,-572" style=""></path>
+<text text-anchor="middle" x="907.1782" y="-632.4" font-family="Times,serif" font-size="14.00" fill="#f0f0f0" style="">beneficiaryBalance</text>
+</g>
+<g id="clust6" class="cluster">
+<title style="">cluster_01</title>
+<polygon fill="#2e3e56" stroke="#000000" points="28.5958,-659 28.5958,-788 319.1102,-788 319.1102,-659 28.5958,-659" style=""></polygon>
+<text text-anchor="middle" x="173.853" y="-771.4" font-family="Times,serif" font-size="14.00" fill="#000000" style="">Legend</text>
+</g>
+<!-- Lock.initialize -->
+<g id="node1" class="node" data-name="Lock.initialize">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="101.5958" cy="-574" rx="44.6549" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="101.5958" y="-569.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">initialize</text>
+</g>
+<!-- Lock.release -->
+<g id="node14" class="node" data-name="Lock.release">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="284.1102" cy="-572" rx="37.6755" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="284.1102" y="-567.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">release</text>
+</g>
+<!-- Lock.initialize&#45;&gt;Lock.release -->
+<g id="edge1" class="edge" data-name="Lock.initialize->Lock.release">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M146.7118,-573.5056C173.8569,-573.2082 208.3936,-572.8297 236.0498,-572.5266" style=""></path>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="236.3217,-576.024 246.2827,-572.4145 236.2449,-569.0244 236.3217,-576.024" style=""></polygon>
+</g>
+<!-- Lock.IERC20 -->
+<g id="node16" class="node" data-name="Lock.IERC20">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="284.1102" cy="-515" rx="42.8771" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="284.1102" y="-510.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">IERC20</text>
+</g>
+<!-- Lock.initialize&#45;&gt;Lock.IERC20 -->
+<g id="edge2" class="edge" data-name="Lock.initialize->Lock.IERC20">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M137.0279,-562.9399C152.4533,-558.0948 170.7318,-552.3131 187.1917,-547 204.812,-541.3123 224.1952,-534.9364 240.9664,-529.3817" style=""></path>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="242.1166,-532.6878 250.5062,-526.2175 239.9128,-526.0437 242.1166,-532.6878" style=""></polygon>
+</g>
+<!-- Lock.getDurationList -->
+
+<!-- Lock.deposit -->
+<g id="node3" class="node" data-name="Lock.deposit">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="101.5958" cy="-412" rx="38.8632" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="101.5958" y="-407.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">deposit</text>
+</g>
+<!-- Lock.approveERC -->
+<g id="node15" class="node" data-name="Lock.approveERC">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="284.1102" cy="-454" rx="60.8371" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="284.1102" y="-449.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">approveERC</text>
+</g>
+<!-- Lock.deposit&#45;&gt;Lock.approveERC -->
+<g id="edge4" class="edge" data-name="Lock.deposit->Lock.approveERC">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M136.7864,-420.098C161.9905,-425.8979 196.5103,-433.8416 225.7998,-440.5817" style=""></path>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="225.3877,-444.0783 235.9179,-442.9101 226.9576,-437.2565 225.3877,-444.0783" style=""></polygon>
+</g>
+<!-- IERC20.allowance -->
+<g id="node17" class="node" data-name="IERC20.allowance">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="907.1782" cy="-405" rx="50.3586" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="907.1782" y="-400.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">allowance</text>
+</g>
+<!-- Lock.deposit&#45;&gt;IERC20.allowance -->
+<g id="edge3" class="edge" data-name="Lock.deposit->IERC20.allowance">
+
+<path fill="none" stroke="#ffffff" stroke-width="2" d="M140.723,-411.66C270.7059,-410.5305 688.7865,-406.8977 846.3408,-405.5286" style=""></path>
+<polygon fill="#ffffff" stroke="#ffffff" stroke-width="2" points="846.8127,-409.0248 856.7819,-405.4379 846.7518,-402.025 846.8127,-409.0248" style=""></polygon>
+</g>
+<!-- IERC20.transferFrom -->
+<g id="node18" class="node" data-name="IERC20.transferFrom">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="907.1782" cy="-351" rx="61.3916" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="907.1782" y="-346.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">transferFrom</text>
+</g>
+<!-- Lock.deposit&#45;&gt;IERC20.transferFrom -->
+<g id="edge5" class="edge" data-name="Lock.deposit->IERC20.transferFrom">
+
+<path fill="none" stroke="#ffffff" stroke-width="2" d="M140.1794,-409.0784C267.226,-399.4582 673.693,-368.6799 837.6416,-356.2654" style=""></path>
+<polygon fill="#ffffff" stroke="#ffffff" stroke-width="2" points="837.9086,-359.7553 847.6158,-355.5102 837.38,-352.7753 837.9086,-359.7553" style=""></polygon>
+</g>
+<!-- IERC20.balanceOf -->
+<g id="node19" class="node" data-name="IERC20.balanceOf">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="907.1782" cy="-297" rx="50.9211" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="907.1782" y="-292.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">balanceOf</text>
+</g>
+<!-- Lock.deposit&#45;&gt;IERC20.balanceOf -->
+<g id="edge6" class="edge" data-name="Lock.deposit->IERC20.balanceOf">
+
+<path fill="none" stroke="#ffffff" stroke-width="2" d="M137.6987,-404.9937C161.8481,-400.4241 194.364,-394.4962 223.1917,-390 486.5129,-348.9308 554.1531,-351.3782 817.7325,-312 828.5823,-310.3791 840.1516,-308.5294 851.2451,-306.6955" style=""></path>
+<polygon fill="#ffffff" stroke="#ffffff" stroke-width="2" points="851.9778,-310.1217 861.265,-305.0229 850.8251,-303.2173 851.9778,-310.1217" style=""></polygon>
+</g>
+<!-- Lock.getStatus -->
+<g id="node4" class="node" data-name="Lock.getStatus">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="101.5958" cy="-304" rx="46.3836" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="101.5958" y="-299.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">getStatus</text>
+</g>
+<!-- Lock.getStatus&#45;&gt;IERC20.balanceOf -->
+<g id="edge7" class="edge" data-name="Lock.getStatus->IERC20.balanceOf">
+
+<path fill="none" stroke="#ffffff" stroke-width="2" d="M148.0947,-303.596C285.7436,-302.3999 691.1931,-298.8768 846.0787,-297.5309" style=""></path>
+<polygon fill="#ffffff" stroke="#ffffff" stroke-width="2" points="846.3828,-301.0285 856.352,-297.4416 846.322,-294.0288 846.3828,-301.0285" style=""></polygon>
+</g>
+<!-- Lock.getTimeRemaining -->
+<g id="node5" class="node" data-name="Lock.getTimeRemaining">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="101.5958" cy="-358" rx="85.6918" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="101.5958" y="-353.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">getTimeRemaining</text>
+</g>
+<!-- Lock.getBalance -->
+<g id="node6" class="node" data-name="Lock.getBalance">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="101.5958" cy="-88" rx="53.8693" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="101.5958" y="-83.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">getBalance</text>
+</g>
+<!-- Lock.getBalance&#45;&gt;IERC20.balanceOf -->
+<g id="edge8" class="edge" data-name="Lock.getBalance->IERC20.balanceOf">
+
+<path fill="none" stroke="#ffffff" stroke-width="2" d="M144.3387,-99.0892C281.2266,-134.6033 708.4453,-245.4408 856.2505,-283.7873" style=""></path>
+<polygon fill="#ffffff" stroke="#ffffff" stroke-width="2" points="855.4309,-287.1905 865.9895,-286.314 857.1889,-280.4148 855.4309,-287.1905" style=""></polygon>
+</g>
+<!-- Lock.getPaymentSize -->
+<g id="node7" class="node" data-name="Lock.getPaymentSize">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="101.5958" cy="-250" rx="73.0113" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="101.5958" y="-245.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">getPaymentSize</text>
+</g>
+<!-- Lock.getElapsedReward -->
+<g id="node8" class="node" data-name="Lock.getElapsedReward">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="726.2998" cy="-574" rx="83.3654" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="726.2998" y="-569.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">getElapsedReward</text>
+</g>
+<!-- Lock.getElapsedReward&#45;&gt;IERC20.balanceOf -->
+<g id="edge10" class="edge" data-name="Lock.getElapsedReward->IERC20.balanceOf">
+
+<path fill="none" stroke="#ffffff" stroke-width="2" d="M759.8297,-557.3526C780.1269,-545.4126 804.5608,-527.3269 817.7325,-504 857.3094,-433.9095 788.6792,-387.8184 837.7325,-324 842.0227,-318.4184 847.6272,-313.9898 853.7934,-310.4761" style=""></path>
+<polygon fill="#ffffff" stroke="#ffffff" stroke-width="2" points="855.6631,-313.4598 863.1419,-305.9552 852.6155,-307.158 855.6631,-313.4598" style=""></polygon>
+</g>
+<!-- paymentsRemaining.sub -->
+<g id="node22" class="node" data-name="paymentsRemaining.sub">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="907.1782" cy="-768" rx="27" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="907.1782" y="-763.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">sub</text>
+</g>
+<!-- Lock.getElapsedReward&#45;&gt;paymentsRemaining.sub -->
+<g id="edge9" class="edge" data-name="Lock.getElapsedReward->paymentsRemaining.sub">
+
+<path fill="none" stroke="#ffffff" stroke-width="2" d="M734.2816,-591.9868C749.7775,-625.0632 786.9291,-695.9948 837.7325,-738 847.8542,-746.3688 860.6649,-752.7772 872.5194,-757.4796" style=""></path>
+<polygon fill="#ffffff" stroke="#ffffff" stroke-width="2" points="871.5788,-760.863 882.1722,-761.0341 873.9976,-754.2941 871.5788,-760.863" style=""></polygon>
+</g>
+<!-- paymentSize.mul -->
+<g id="node23" class="node" data-name="paymentSize.mul">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="907.1782" cy="-683" rx="27" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="907.1782" y="-678.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">mul</text>
+</g>
+<!-- Lock.getElapsedReward&#45;&gt;paymentSize.mul -->
+<g id="edge11" class="edge" data-name="Lock.getElapsedReward->paymentSize.mul">
+
+<path fill="none" stroke="#ffffff" stroke-width="2" d="M748.0153,-591.471C769.84,-608.5201 804.8661,-634.5191 837.7325,-653 849.1802,-659.4371 862.281,-665.4229 873.9966,-670.3277" style=""></path>
+<polygon fill="#ffffff" stroke="#ffffff" stroke-width="2" points="872.8638,-673.6455 883.4452,-674.1796 875.5064,-667.1635 872.8638,-673.6455" style=""></polygon>
+</g>
+<!-- beneficiaryBalance.add -->
+<g id="node24" class="node" data-name="beneficiaryBalance.add">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="907.1782" cy="-598" rx="27" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="907.1782" y="-593.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">add</text>
+</g>
+<!-- Lock.getElapsedReward&#45;&gt;beneficiaryBalance.add -->
+<g id="edge12" class="edge" data-name="Lock.getElapsedReward->beneficiaryBalance.add">
+
+<path fill="none" stroke="#ffffff" stroke-width="2" d="M797.5281,-583.451C822.3923,-586.7501 849.2875,-590.3187 870.2186,-593.096" style=""></path>
+<polygon fill="#ffffff" stroke="#ffffff" stroke-width="2" points="869.9047,-596.5849 880.2782,-594.4307 870.8255,-589.6457 869.9047,-596.5849" style=""></polygon>
+</g>
+<!-- Lock.updateBeneficiaryBalance -->
+<g id="node9" class="node" data-name="Lock.updateBeneficiaryBalance">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="493.9479" cy="-574" rx="112.8385" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="493.9479" y="-569.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">updateBeneficiaryBalance</text>
+</g>
+<!-- Lock.updateBeneficiaryBalance&#45;&gt;Lock.getElapsedReward -->
+<g id="edge13" class="edge" data-name="Lock.updateBeneficiaryBalance->Lock.getElapsedReward">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M607.0609,-574C615.5942,-574 624.1495,-574 632.5425,-574" style=""></path>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="632.6873,-577.5001 642.6873,-574 632.6872,-570.5001 632.6873,-577.5001" style=""></polygon>
+</g>
+<!-- Lock.changeBeneficiary -->
+<g id="node10" class="node" data-name="Lock.changeBeneficiary">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="101.5958" cy="-196" rx="83.3461" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="101.5958" y="-191.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">changeBeneficiary</text>
+</g>
+<!-- Lock.getBeneficiary -->
+<g id="node11" class="node" data-name="Lock.getBeneficiary">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="101.5958" cy="-142" rx="67.7529" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="101.5958" y="-137.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">getBeneficiary</text>
+</g>
+<!-- Lock.changeToken -->
+<g id="node12" class="node" data-name="Lock.changeToken">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="101.5958" cy="-466" rx="63.1073" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="101.5958" y="-461.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">changeToken</text>
+</g>
+<!-- Lock.changeToken&#45;&gt;Lock.IERC20 -->
+<g id="edge14" class="edge" data-name="Lock.changeToken->Lock.IERC20">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M147.6519,-478.3648C175.3032,-485.7884 210.3618,-495.2006 238.0193,-502.6259" style=""></path>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="237.2811,-506.0516 247.8467,-505.2643 239.0962,-499.291 237.2811,-506.0516" style=""></polygon>
+</g>
+<!-- Lock.getToken -->
+<g id="node13" class="node" data-name="Lock.getToken">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="101.5958" cy="-34" rx="47.5139" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="101.5958" y="-29.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">getToken</text>
+</g>
+<!-- Lock.release&#45;&gt;Lock.updateBeneficiaryBalance -->
+<g id="edge15" class="edge" data-name="Lock.release->Lock.updateBeneficiaryBalance">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M322.1102,-572.3622C336.2283,-572.4967 353.1209,-572.6578 370.7229,-572.8255" style=""></path>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="371.1201,-576.3294 381.153,-572.9249 371.1869,-569.3297 371.1201,-576.3294" style=""></polygon>
+</g>
+<!-- Lock.release&#45;&gt;IERC20.balanceOf -->
+<g id="edge17" class="edge" data-name="Lock.release->IERC20.balanceOf">
+
+<path fill="none" stroke="#ffffff" stroke-width="2" d="M311.4966,-559.4516C322.1283,-554.3381 334.3037,-548.1807 345.0287,-542 361.6897,-532.3985 363.9864,-526.9071 381.0287,-518 565.9032,-421.3755 646.0489,-464.4891 817.7325,-346 828.6081,-338.4941 826.8404,-331.482 837.7325,-324 844.1799,-319.5711 851.4561,-315.728 858.8099,-312.4412" style=""></path>
+<polygon fill="#ffffff" stroke="#ffffff" stroke-width="2" points="860.2205,-315.6452 868.1095,-308.573 857.5322,-309.182 860.2205,-315.6452" style=""></polygon>
+</g>
+<!-- IERC20.transfer -->
+<g id="node20" class="node" data-name="IERC20.transfer">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="907.1782" cy="-513" rx="40.5441" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="907.1782" y="-508.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">transfer</text>
+</g>
+<!-- Lock.release&#45;&gt;IERC20.transfer -->
+<g id="edge16" class="edge" data-name="Lock.release->IERC20.transfer">
+
+<path fill="none" stroke="#ffffff" stroke-width="2" d="M316.0967,-562.1328C334.8354,-556.7604 359.065,-550.5104 381.0287,-547 553.9673,-519.3595 762.2963,-514.0433 856.5182,-513.1212" style=""></path>
+<polygon fill="#ffffff" stroke="#ffffff" stroke-width="2" points="856.6558,-516.6203 866.6256,-513.0351 856.5961,-509.6206 856.6558,-516.6203" style=""></polygon>
+</g>
+<!-- IERC20.approve -->
+<g id="node21" class="node" data-name="IERC20.approve">
+
+<ellipse fill="#edad56" stroke="#edad56" stroke-width="3" cx="907.1782" cy="-459" rx="42.2777" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="907.1782" y="-454.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">approve</text>
+</g>
+<!-- Lock.approveERC&#45;&gt;IERC20.approve -->
+<g id="edge18" class="edge" data-name="Lock.approveERC->IERC20.approve">
+
+<path fill="none" stroke="#ffffff" stroke-width="2" d="M345.272,-454.4908C467.4749,-455.4715 739.9157,-457.6578 854.6444,-458.5784" style=""></path>
+<polygon fill="#ffffff" stroke="#ffffff" stroke-width="2" points="854.8911,-462.0804 864.9189,-458.6609 854.9473,-455.0806 854.8911,-462.0804" style=""></polygon>
+</g>
+<!-- key -->
+<g id="node25" class="node" data-name="key">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="166.5958,-755 36.5958,-755 36.5958,-667 166.5958,-667 166.5958,-755" style=""></polygon>
+<text text-anchor="start" x="86.2318" y="-736.4" font-family="Times,serif" font-size="14.00" fill="#000000" style="">Internal Call</text>
+<text text-anchor="start" x="82.3398" y="-716.4" font-family="Times,serif" font-size="14.00" fill="#000000" style="">External Call</text>
+<text text-anchor="start" x="59.8012" y="-696.4" font-family="Times,serif" font-size="14.00" fill="#000000" style="">Defined Contract</text>
+<text text-anchor="start" x="46.1985" y="-676.4" font-family="Times,serif" font-size="14.00" fill="#000000" style="">Undefined Contract</text>
+</g>
+<!-- key2 -->
+<g id="node26" class="node" data-name="key2">
+
+<polygon fill="#edad56" stroke="transparent" stroke-width="3" points="311.1102,-755 257.1102,-755 257.1102,-667 311.1102,-667 311.1102,-755" style=""></polygon>
+<text text-anchor="start" x="271.8693" y="-736.4" font-family="Times,serif" font-size="14.00" fill="#000000" style="">&nbsp;&nbsp;&nbsp;</text>
+<text text-anchor="start" x="271.8693" y="-716.4" font-family="Times,serif" font-size="14.00" fill="#000000" style="">&nbsp;&nbsp;&nbsp;</text>
+<polygon fill="#445773" stroke="transparent" points="270.1102,-691 270.1102,-711 298.1102,-711 298.1102,-691 270.1102,-691" style=""></polygon>
+<text text-anchor="start" x="271.8693" y="-696.4" font-family="Times,serif" font-size="14.00" fill="#000000" style="">&nbsp;&nbsp;&nbsp;</text>
+<polygon fill="none" stroke="#e8726d" points="272.1102,-673 272.1102,-689 296.1102,-689 296.1102,-673 272.1102,-673" style=""></polygon>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge19" class="edge" data-name="key->key2">
+
+<path fill="none" stroke="#1bc6a6" stroke-width="2" d="M158.5958,-741C204.5761,-741 218.5633,-741 259.9196,-741" style=""></path>
+<polygon fill="#1bc6a6" stroke="#1bc6a6" stroke-width="2" points="260.1102,-744.5001 270.1102,-741 260.1101,-737.5001 260.1102,-744.5001" style=""></polygon>
+</g>
+<!-- key&#45;&gt;key2 -->
+<g id="edge20" class="edge" data-name="key->key2">
+
+<path fill="none" stroke="#ffffff" stroke-width="2" d="M158.5958,-721C204.5761,-721 218.5633,-721 259.9196,-721" style=""></path>
+<polygon fill="#ffffff" stroke="#ffffff" stroke-width="2" points="260.1102,-724.5001 270.1102,-721 260.1101,-717.5001 260.1102,-724.5001" style=""></polygon>
+</g>
+<g id="node2" class="node" data-name="Lock.getDurationList">
+
+<ellipse fill="#ff9797" stroke="#ff9797" stroke-width="3" cx="101.5958" cy="-520" rx="72.3671" ry="18" style=""></ellipse>
+<text text-anchor="middle" x="101.5958" y="-515.8" font-family="Times,serif" font-size="14.00" fill="#000000" style="">getDurationList</text>
+</g></g>
+</svg>
